@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <!--
+        Geeft aan dat dit een HTML5-document is.
+    -->
+    <meta charset="utf-8"/>
+
+    <!--
+        De viewport zorgt ervoor dat de website zich aanpast
+        aan de breedte van het scherm.
+        Dit is belangrijk voor responsive design op bijvoorbeeld
+        een telefoon of tablet.
+    -->
+    <meta
+        content="width=device-width, initial-scale=1.0"
+        name="viewport"
+    />
+
+    <!--
+        Titel die zichtbaar wordt in het browsertabblad.
+    -->
+    <title>Whoami - Delisha Ashruf</title>
+
+    <!--
+        Koppeling naar het externe CSS-bestand.
+
+        HTML bepaalt voornamelijk de structuur van de pagina.
+        CSS bepaalt voornamelijk de vormgeving en layout.
+    -->
+    <link
+        href="style.css"
+        rel="stylesheet"
+    />
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         HEADER EN NAVIGATIE
+         ================================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <!--
+                De nav bevat de belangrijkste navigatielinks
+                van mijn portfolio.
+            -->
+            <nav>
+
+                <ul>
+
+                    <!--
+                        class="active" geeft aan op welke pagina
+                        de gebruiker zich momenteel bevindt.
+                    -->
+                    <li>
+                        <a
+                            class="active"
+                            href="index.html"
+                        >
+                            whoami
+                        </a>
+                    </li>
+
+                    <!-- Link naar de projectenpagina -->
+                    <li>
+                        <a href="projecten.html">
+                            Projecten
+                        </a>
+                    </li>
+
+                    <!-- Link naar de blogpagina -->
+                    <li>
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         HOOFDINHOUD
+         ================================================== -->
+
+    <main class="container page">
+
+
+        <!-- ==================================================
+             HERO / INTRODUCTIE
+             ================================================== -->
+
+        <!--
+            De hero is het eerste grote gedeelte van de pagina.
+            Hier stel ik mezelf kort voor.
+        -->
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <!--
+                    Klein label boven mijn naam.
+                -->
+                <div class="label">
+                    — whoami
+                </div>
+
+
+                <!--
+                    h1 is de belangrijkste titel van de pagina.
+                    Daarom gebruik ik hier mijn naam als hoofdheading.
+
+                    <br/> zorgt ervoor dat mijn voor- en achternaam
+                    op een nieuwe regel komen.
+                -->
+                <h1>
+                    Delisha<br/>
+                    <span style="color:#6b6b6b;">
+                        Ashruf
+                    </span>
+                </h1>
+
+
+                <!--
+                    Korte introductie over mijzelf.
+                -->
+                <p class="intro">
+                    HBO ICT student die momenteel in haar tweede jaar zit.
+                    Ik bouw webapplicaties die snel, toegankelijk en
+                    aangenaam in gebruik zijn — van de database tot de pixel.
+                </p>
+
+
+                <!--
+                    Deze twee links zijn vormgegeven als knoppen.
+
+                    De eerste link verwijst naar mijn projecten.
+                    De tweede gebruikt mailto om een e-mail te openen.
+                -->
+                <div class="buttons">
+
+                    <!-- Link naar de projectenpagina -->
+                    <a
+                        class="button primary"
+                        href="projecten.html"
+                    >
+                        Projecten bekijken →
+                    </a>
+
+                    <!-- Link waarmee de gebruiker contact kan opnemen -->
+                    <a
+                        class="button"
+                        href="mailto:delishaashruf@gmail.com"
+                    >
+                        Contact opnemen
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!--
+                Afbeelding van mijzelf.
+
+                De alt-tekst beschrijft de afbeelding.
+                Dit is belangrijk voor toegankelijkheid, bijvoorbeeld
+                wanneer iemand een screenreader gebruikt.
+            -->
+            <img
+                alt="Portretfoto van Delisha Ashruf"
+                class="photo"
+                src="delisha.JPG"
+            />
+
+        </section>
+
+
+        <!-- ==================================================
+             OVER MIJ
+             ================================================== -->
+
+        <!--
+            Elke belangrijke inhoudelijke groep staat in een
+            eigen section.
+
+            Hierdoor is de HTML semantischer en blijft de
+            structuur overzichtelijk.
+        -->
+        <section class="section">
+
+            <div class="section-grid">
+
+                <!-- Titel van deze sectie -->
+                <h2 class="section-title">
+                    Over mij
+                </h2>
+
+
+                <!-- Tekst over mijzelf -->
+                <div>
+
+                    <p>
+                        Ik studeer al 4 jaar ICT en ben gefascineerd door het
+                        snijvlak van techniek en ontwerp. Mijn code is leesbaar
+                        en mijn interfaces zijn snel — niet toevallig, maar
+                        door bewuste keuzes.
+                    </p>
+
+
+                    <p>
+                        Naast mijn dagelijkse werk en studie draag ik bij aan
+                        open source projecten en schrijf ik over front-end architectuur.
+                    </p>
+
+
+                    <p>
+                        Buiten het scherm: Klantenservice, fysiek bezig zijn en bewegen.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             VAARDIGHEDEN
+             ================================================== -->
+
+        <!--
+            Hier staan mijn technische vaardigheden.
+
+            Ik heb ze verdeeld over verschillende categorieën
+            zodat de informatie overzichtelijk blijft.
+        -->
+        <section class="section">
+
+            <div class="section-grid">
+
+                <!-- Titel van de vaardigheden-sectie -->
+                <h2 class="section-title">
+                    Vaardigheden
+                </h2>
+
+
+                <!--
+                    Container waarin de verschillende
+                    vaardigheidscategorieën staan.
+                -->
+                <div class="skills">
+
+
+                    <!-- ==========================
+                         FRONTEND
+                         ========================== -->
+
+                    <div>
+
+                        <h3>
+                            Frontend
+                        </h3>
+
+                        <ul>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ==========================
+                         BACKEND
+                         ========================== -->
+
+                    <div>
+
+                        <h3>
+                            Backend
+                        </h3>
+
+                        <ul>
+                            <li>C++</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Object-Oriented Programming</li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ==========================
+                         DEVOPS
+                         ========================== -->
+
+                    <div>
+
+                        <h3>
+                            DevOps
+                        </h3>
+
+                        <ul>
+                            <li>GitHub Actions</li>
+                            <li>Linux</li>
+                            <li>Bash / Shell Scripting</li>
+                            <li>Security Essentials</li>
+                            <li>Shellcode</li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ==========================
+                         TOOLS
+                         ========================== -->
+
+                    <div>
+
+                        <h3>
+                            Tools
+                        </h3>
+
+                        <ul>
+                            <li>Git / GitHub</li>
+                            <li>IntelliJ IDEA</li>
+                            <li>Visual Studio Code</li>
+                            <li>Sublime Text</li>
+                            <li>MySQL workbench</li>
+                            <li>Figma</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             TIJDLIJN
+             ================================================== -->
+
+        <!--
+            Een ordered list (<ol>) wordt hier gebruikt omdat
+            de onderdelen een chronologische volgorde hebben.
+
+            Een <ol> is bedoeld voor een lijst waarbij de
+            volgorde betekenis heeft.
+        -->
+        <section class="section">
+
+            <div class="section-grid">
+
+                <!-- Titel van de tijdlijn -->
+                <h2 class="section-title">
+                    Tijdlijn
+                </h2>
+
+
+                <!--
+                    Chronologische lijst van werkervaring
+                    en opleidingen.
+                -->
+                <ol class="timeline">
+
+
+                    <!-- ==========================
+                         WERKERVARING
+                         ========================== -->
+
+                    <li>
+
+                        <!-- Periode -->
+                        <span class="year">
+                            2023-2026
+                        </span>
+
+                        <div>
+
+                            <!-- Functie -->
+                            <strong>
+                                Klantenservice/ Backoffice Medewerker
+                            </strong>
+
+                            <br/>
+
+                            <!-- Organisatie -->
+                            <span style="color:#6b6b6b;">
+                                IKEA
+                            </span>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- ==========================
+                         HUIDIGE OPLEIDING
+                         ========================== -->
+
+                    <li>
+
+                        <!-- Periode -->
+                        <span class="year">
+                            2025-2026
+                        </span>
+
+                        <div>
+
+                            <!-- Opleiding -->
+                            <strong>
+                                HBO ICT
+                            </strong>
+
+                            <br/>
+
+                            <!-- Onderwijsinstelling -->
+                            <span style="color:#6b6b6b;">
+                                Haagse Hogeschool
+                            </span>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- ==========================
+                         VORIGE OPLEIDING
+                         ========================== -->
+
+                    <li>
+
+                        <!-- Periode -->
+                        <span class="year">
+                            2024-2025
+                        </span>
+
+                        <div>
+
+                            <!-- Opleiding -->
+                            <strong>
+                                BSc Data science &amp; AI
+                            </strong>
+
+                            <br/>
+
+                            <!-- Onderwijsinstelling -->
+                            <span style="color:#6b6b6b;">
+                                Universiteit Leiden
+                            </span>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- ==========================
+                         VORIGE OPLEIDING
+                         ========================== -->
+
+                    <li>
+
+                        <!-- Periode -->
+                        <span class="year">
+                            2023-2024
+                        </span>
+
+                        <div>
+
+                            <!-- Opleiding -->
+                            <strong>
+                                BSc Informatica
+                            </strong>
+
+                            <br/>
+
+                            <!-- Onderwijsinstelling -->
+                            <span style="color:#6b6b6b;">
+                                Universiteit Leiden
+                            </span>
+
+                        </div>
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             OPDRACHT 2 - API
+             ================================================== -->
+
+        <!--
+            Deze section hoort bij WPFW Opdracht 2.
+
+            Met JavaScript wordt hier dynamisch een quote
+            opgehaald vanuit een externe API.
+
+            De HTML bevat de structuur en de plek waar de
+            quote uiteindelijk moet verschijnen.
+        -->
+        <section
+            class="opdracht2-section"
+            id="programmeerquote"
+        >
+
+            <!-- Categorie-label -->
+            <span class="category">
+                API
+            </span>
+
+
+            <!-- Titel van de API-sectie -->
+            <h2>
+                Een programmeerquote
+            </h2>
+
+
+            <!-- Uitleg over het gebruik van de API -->
+            <p>
+                Ik gebruik hier een openbare API om dynamisch
+                een programmeerquote op te halen.
+            </p>
+
+
+            <!--
+                aria-live="polite" zorgt ervoor dat wijzigingen
+                in dit element toegankelijk worden doorgegeven
+                aan een screenreader.
+
+                JavaScript kan de tekst bijvoorbeeld veranderen
+                van "Quote wordt geladen..." naar een andere status.
+            -->
+            <div
+                aria-live="polite"
+                class="quote-status"
+                id="quote-status"
+            >
+                Quote wordt geladen...
+            </div>
+
+
+            <!--
+                Hier wordt de quote door JavaScript ingevuld.
+
+                Het element is leeg in de HTML omdat de gegevens
+                vanuit de API worden opgehaald.
+            -->
+            <blockquote
+                class="quote-content"
+                id="quote-content"
+            ></blockquote>
+
+
+            <!--
+                Hier wordt de naam van de auteur door
+                JavaScript ingevuld.
+            -->
+            <p
+                class="quote-author"
+                id="quote-author"
+            ></p>
+
+
+            <!--
+                Deze knop kan via JavaScript een nieuwe
+                quote ophalen wanneer de gebruiker erop klikt.
+            -->
+            <button
+                class="button primary"
+                id="new-quote"
+                type="button"
+            >
+                Nieuwe quote
+            </button>
+
+        </section>
+
+
+        <!-- ==================================================
+             OPDRACHT 2 - CONTACTFORMULIER
+             ================================================== -->
+
+        <section
+            class="opdracht2-section"
+            id="contact"
+        >
+
+            <!-- Categorie-label -->
+            <span class="category">
+                CONTACT
+            </span>
+
+
+            <!-- Titel van het contactformulier -->
+            <h2>
+                Neem contact op
+            </h2>
+
+
+            <!-- Korte uitleg voor de gebruiker -->
+            <p>
+                Heb je een vraag of wil je contact opnemen?
+                Vul dan het formulier hieronder in.
+            </p>
+
+
+            <!--
+                Contactformulier.
+
+                novalidate zorgt ervoor dat de standaard
+                browservalidatie wordt uitgeschakeld.
+
+                Hierdoor kan JavaScript zelf bepalen hoe
+                de validatie en foutmeldingen worden uitgevoerd.
+            -->
+            <form
+                class="contact-form"
+                id="contact-form"
+                novalidate
+            >
+
+
+                <!-- ==========================
+                     NAAM
+                     ========================== -->
+
+                <div class="form-field">
+
+                    <!--
+                        for="naam" koppelt het label aan
+                        het inputveld met id="naam".
+                    -->
+                    <label for="naam">
+                        Naam
+                    </label>
+
+
+                    <!--
+                        Inputveld voor de naam.
+
+                        aria-describedby verwijst naar de
+                        mogelijke foutmelding.
+
+                        aria-invalid geeft aan of de huidige
+                        invoer geldig is.
+
+                        autocomplete helpt de browser bij
+                        het automatisch invullen.
+                    -->
+                    <input
+                        aria-describedby="naam-error"
+                        aria-invalid="false"
+                        autocomplete="name"
+                        id="naam"
+                        name="naam"
+                        type="text"
+                    />
+
+
+                    <!--
+                        Hier kan JavaScript een foutmelding plaatsen.
+
+                        aria-live zorgt ervoor dat de wijziging
+                        toegankelijk wordt aangekondigd.
+                    -->
+                    <p
+                        aria-live="polite"
+                        class="field-error"
+                        id="naam-error"
+                    ></p>
+
+                </div>
+
+
+                <!-- ==========================
+                     E-MAIL
+                     ========================== -->
+
+                <div class="form-field">
+
+                    <!-- Label van het e-mailveld -->
+                    <label for="email">
+                        E-mailadres
+                    </label>
+
+
+                    <!--
+                        Inputveld voor het e-mailadres.
+
+                        type="email" geeft aan dat hier een
+                        e-mailadres wordt verwacht.
+                    -->
+                    <input
+                        aria-describedby="email-error"
+                        aria-invalid="false"
+                        autocomplete="email"
+                        id="email"
+                        name="email"
+                        type="email"
+                    />
+
+
+                    <!--
+                        Hier wordt een eventuele foutmelding
+                        voor het e-mailadres geplaatst.
+                    -->
+                    <p
+                        aria-live="polite"
+                        class="field-error"
+                        id="email-error"
+                    ></p>
+
+                </div>
+
+
+                <!-- ==========================
+                     BERICHT
+                     ========================== -->
+
+                <div class="form-field">
+
+                    <!-- Label van het berichtveld -->
+                    <label for="bericht">
+                        Bericht
+                    </label>
+
+
+                    <!--
+                        textarea wordt gebruikt voor langere
+                        tekst, zoals een bericht.
+                    -->
+                    <textarea
+                        aria-describedby="bericht-error"
+                        aria-invalid="false"
+                        id="bericht"
+                        rows="6"
+                    ></textarea>
+
+
+                    <!--
+                        Hier wordt een eventuele foutmelding
+                        voor het bericht geplaatst.
+                    -->
+                    <p
+                        aria-live="polite"
+                        class="field-error"
+                        id="bericht-error"
+                    ></p>
+
+                </div>
+
+
+                <!--
+                    Submit-knop van het formulier.
+
+                    JavaScript kan eerst controleren of
+                    de ingevulde gegevens geldig zijn.
+                -->
+                <button
+                    class="button primary"
+                    type="submit"
+                >
+                    Versturen
+                </button>
+
+
+                <!--
+                    Hier kan JavaScript een succesmelding
+                    plaatsen nadat het formulier correct
+                    is gecontroleerd.
+                -->
+                <p
+                    aria-live="polite"
+                    class="form-success"
+                    id="form-success"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <!-- Copyrightinformatie -->
+            <p>
+                © 2026 Delisha Ashruf — Mijn portfolio
+            </p>
+
+
+            <!--
+                Links naar externe/professionele
+                contactmogelijkheden.
+            -->
+            <div class="links">
+
+                <!--
+                    target="_blank" opent GitHub
+                    in een nieuw tabblad.
+                -->
+                <a
+                    href="https://github.com/delisha11"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+
+                <!--
+                    target="_blank" opent LinkedIn
+                    in een nieuw tabblad.
+                -->
+                <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                >
+                    LinkedIn
+                </a>
+
+
+                <!--
+                    mailto opent het standaard
+                    e-mailprogramma van de gebruiker.
+                -->
+                <a
+                    href="mailto:delishaashruf@gmail.com"
+                >
+                    delishaashruf@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+         ================================================== -->
+
+    <!--
+        Koppeling naar het JavaScript-bestand.
+
+        defer zorgt ervoor dat het script pas wordt uitgevoerd
+        nadat de HTML is ingelezen.
+
+        Hierdoor kan JavaScript veilig zoeken naar elementen
+        zoals:
+        - #contact-form
+        - #new-quote
+        - #quote-content
+    -->
+    <script
+        defer
+        src="script.js"
+    ></script>
+
+</body>
+</html>

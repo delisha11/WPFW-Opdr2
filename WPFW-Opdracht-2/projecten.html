@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+    <!--
+        Geeft aan dat dit een HTML5-document is.
+    -->
+    <meta charset="utf-8"/>
+
+
+    <!--
+        De viewport zorgt ervoor dat de website zich aanpast
+        aan de breedte van het scherm.
+
+        Dit is belangrijk voor responsive design op bijvoorbeeld
+        een telefoon of tablet.
+    -->
+    <meta
+        content="width=device-width, initial-scale=1.0"
+        name="viewport"
+    />
+
+
+    <!--
+        Titel die zichtbaar wordt in het browsertabblad.
+    -->
+    <title>Projecten - Delisha Ashruf</title>
+
+
+    <!--
+        Koppeling naar het externe CSS-bestand.
+
+        HTML bepaalt de structuur van de pagina.
+        CSS bepaalt voornamelijk de vormgeving.
+    -->
+    <link
+        href="style.css"
+        rel="stylesheet"
+    />
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HEADER EN NAVIGATIE
+         ================================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <!--
+                De nav bevat de navigatielinks van mijn portfolio.
+            -->
+            <nav>
+
+                <ul>
+
+                    <!--
+                        Link naar de whoami-pagina.
+                    -->
+                    <li>
+                        <a href="index.html">
+                            whoami
+                        </a>
+                    </li>
+
+
+                    <!--
+                        Dit is de huidige pagina.
+
+                        class="active" wordt gebruikt om in de
+                        CSS zichtbaar te maken dat de gebruiker
+                        momenteel op de projectenpagina zit.
+                    -->
+                    <li>
+                        <a
+                            class="active"
+                            href="projecten.html"
+                        >
+                            Projecten
+                        </a>
+                    </li>
+
+
+                    <!--
+                        Link naar de blogpagina.
+                    -->
+                    <li>
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         HOOFDINHOUD
+         ================================================== -->
+
+    <main class="container page">
+
+
+        <!-- ==================================================
+             INTRODUCTIE
+             ================================================== -->
+
+        <!--
+            Klein label waarmee het onderdeel van de website
+            wordt aangegeven.
+        -->
+        <div class="label">
+            — Projecten
+        </div>
+
+
+        <!--
+            h1 is de belangrijkste titel van deze pagina.
+        -->
+        <h1>
+            Wat ik heb gemaakt
+        </h1>
+
+
+        <!--
+            Introductietekst waarin wordt uitgelegd
+            wat de gebruiker op deze pagina kan vinden.
+        -->
+        <p class="intro">
+            Een overzicht van opdrachten en projecten die ik tijdens mijn opleiding
+            heb gemaakt. Hier laat ik zien wat ik heb geleerd met C++ en Java.
+        </p>
+
+
+        <!-- ==================================================
+             PROJECTFILTERS
+             ================================================== -->
+
+        <!--
+            CSS-only filterysteem:
+
+            De radio buttons bepalen welke projecten zichtbaar
+            kunnen worden.
+
+            De radio buttons kunnen door CSS gebruikt worden
+            om een bepaalde status bij te houden.
+
+            De labels kunnen vervolgens als zichtbare
+            filterknoppen worden gebruikt.
+
+            De ~ (general sibling) selector in style.css
+            kan de checked-status gebruiken om de zichtbaarheid
+            van projectkaarten te beïnvloeden.
+        -->
+
+
+        <!--
+            Filter voor alle projecten.
+
+            checked="" betekent dat deze optie standaard
+            geselecteerd is.
+        -->
+        <input
+            checked=""
+            id="filter-all"
+            name="project-filter"
+            type="radio"
+        />
+
+
+        <!--
+            Filter voor C++-projecten.
+
+            Alle radio buttons hebben dezelfde name.
+            Hierdoor kan maar één filter tegelijk geselecteerd
+            worden binnen deze groep.
+        -->
+        <input
+            id="filter-cpp"
+            name="project-filter"
+            type="radio"
+        />
+
+
+        <!--
+            Filter voor Java-projecten.
+        -->
+        <input
+            id="filter-java"
+            name="project-filter"
+            type="radio"
+        />
+
+
+        <!--
+            De labels/knoppen hieronder vormen de
+            zichtbare bediening voor de filters.
+        -->
+        <div
+            class="filters"
+            id="project-controls"
+        >
+
+            <!--
+                Filterknop om alle projecten te tonen.
+                data-filter bevat de waarde die JavaScript
+                kan gebruiken om te bepalen welk filter actief is.
+            -->
+            <button
+                class="filter active"
+                data-filter="all"
+                type="button"
+            >
+                Alles
+            </button>
+
+
+            <!--
+                Filterknop voor C++-projecten.
+            -->
+            <button
+                class="filter"
+                data-filter="cpp"
+                type="button"
+            >
+                C++
+            </button>
+
+
+            <!--
+                Filterknop voor Java-projecten.
+            -->
+            <button
+                class="filter"
+                data-filter="java"
+                type="button"
+            >
+                Java
+            </button>
+
+
+            <!--
+                Label voor het sorteer-menu.
+
+                for="project-sort" koppelt het label aan
+                het select-element met id="project-sort".
+            -->
+            <label
+                class="sort-label"
+                for="project-sort"
+            >
+                Sorteren:
+            </label>
+
+
+            <!--
+                Select-menu waarmee de gebruiker kan bepalen
+                hoe de projecten gesorteerd worden.
+            -->
+            <select
+                class="sort-select"
+                id="project-sort"
+            >
+
+                <!--
+                    Standaard sorteervolgorde.
+                -->
+                <option value="default">
+                    Standaard
+                </option>
+
+
+                <!--
+                    Sorteert de projecten op naam van A naar Z.
+                -->
+                <option value="az">
+                    Naam A-Z
+                </option>
+
+
+                <!--
+                    Sorteert de projecten op naam van Z naar A.
+                -->
+                <option value="za">
+                    Naam Z-A
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ==================================================
+             AANTAL PROJECTEN
+             ================================================== -->
+
+        <!--
+            Hier kan JavaScript dynamisch het aantal zichtbare
+            projecten tonen.
+
+            aria-live="polite" zorgt ervoor dat een
+            screenreader een wijziging in deze tekst kan
+            aankondigen zonder de gebruiker direct te storen.
+        -->
+        <p
+            aria-live="polite"
+            class="project-count"
+            id="project-count"
+        ></p>
+
+
+        <!-- ==================================================
+             PROJECTEN
+             ================================================== -->
+
+        <!--
+            Hier worden de projectkaarten geplaatst.
+
+            Het section-element is leeg in de HTML omdat
+            JavaScript de projecten dynamisch in deze
+            container kan plaatsen.
+
+            id="project-grid" maakt het mogelijk om dit
+            specifieke element vanuit JavaScript te vinden.
+        -->
+        <section
+            class="project-grid"
+            id="project-grid"
+        ></section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <!--
+                Copyrightinformatie van de portfoliowebsite.
+            -->
+            <p>
+                © 2026 Delisha Ashruf — Mijn portfolio
+            </p>
+
+
+            <!--
+                Links naar mijn GitHub, LinkedIn en
+                e-mailadres.
+            -->
+            <div class="links">
+
+                <!--
+                    target="_blank" opent GitHub
+                    in een nieuw tabblad.
+                -->
+                <a
+                    href="https://github.com/delisha11"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+
+                <!--
+                    target="_blank" opent LinkedIn
+                    in een nieuw tabblad.
+                -->
+                <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                >
+                    LinkedIn
+                </a>
+
+
+                <!--
+                    mailto opent het standaard
+                    e-mailprogramma van de gebruiker.
+                -->
+                <a
+                    href="mailto:delishaashruf@gmail.com"
+                >
+                    delishaashruf@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+         ================================================== -->
+
+    <!--
+        Koppeling naar het JavaScript-bestand.
+
+        defer zorgt ervoor dat het script pas wordt uitgevoerd
+        nadat de HTML is ingelezen.
+
+        Het JavaScript kan hierdoor veilig elementen vinden
+        zoals:
+        - #project-controls
+        - #project-sort
+        - #project-count
+        - #project-grid
+
+        Het script zorgt vervolgens voor de dynamische
+        werking van de projectenpagina.
+    -->
+    <script
+        defer="True"
+        src="script.js"
+    ></script>
+
+</body>
+</html>
