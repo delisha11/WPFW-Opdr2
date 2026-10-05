@@ -494,45 +494,6 @@ p {
 }
 
 
-/*
-   Deze radio buttons worden verborgen.
-   De filtering wordt door JavaScript geregeld.
-*/
-#filter-all,
-#filter-cpp,
-#filter-java {
-    display: none;
-}
-
-
-/*
-   Deze CSS-regels waren bedoeld voor de oorspronkelijke
-   radio-button filtering.
-   Ze bepalen welke filter er actief uitziet wanneer
-   een radio button geselecteerd is.
-*/
-#filter-all:checked ~ .filters .filter[for="filter-all"],
-#filter-cpp:checked ~ .filters .filter[for="filter-cpp"],
-#filter-java:checked ~ .filters .filter[for="filter-java"] {
-    background: var(--text);
-    color: white;
-    border-color: var(--text);
-}
-
-
-/*
-   Deze regels verbergen projecten die niet bij de
-   geselecteerde C++- of Java-filter horen.
-*/
-#filter-cpp:checked ~ .project-grid .project:not(.project-cpp) {
-    display: none;
-}
-
-#filter-java:checked ~ .project-grid .project:not(.project-java) {
-    display: none;
-}
-
-
 /* ==========================================================
    PROJECTEN
    ========================================================== */
@@ -1192,7 +1153,7 @@ footer a:hover {
 }
 
 
-/* Ruimte wordt gereserveerd voor foutmeldingen.
+/*Ruimte wordt gereserveerd voor foutmeldingen.
    Hierdoor verspringt de pagina minder wanneer een foutmelding
    verschijnt.   */
 .field-error {
